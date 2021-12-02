@@ -1,6 +1,5 @@
 package hu.bme.aut.funtravel.activities
 
-import android.R.attr
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,12 +11,6 @@ import hu.bme.aut.funtravel.data.DestinationDatabase
 
 import hu.bme.aut.funtravel.databinding.ActivityMainBinding
 import kotlin.concurrent.thread
-import android.widget.Toast
-
-import android.R.attr.data
-
-
-
 
 private lateinit var binding: ActivityMainBinding
 private lateinit var adapter: DestinationAdapter
@@ -59,10 +52,6 @@ class MainActivity : AppCompatActivity(), DestinationAdapter.DestinationClickLis
         val intent = Intent(this, SightsActivity::class.java)
         intent.putExtra("DESTINATION_NAME", item.dname)
         startActivity(intent)
-    }
-
-    override fun onItemChanged(item: Destination) {
-        //database.DestinationDao().update(item)
     }
 
 

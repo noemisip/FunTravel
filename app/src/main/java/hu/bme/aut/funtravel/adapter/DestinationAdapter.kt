@@ -18,13 +18,11 @@ class DestinationAdapter(private val listener: DestinationClickListener) :
     override fun onBindViewHolder(holder: DestinationViewHolder, position: Int) {
         val destination = items[position]
         holder.destination = destination
-        // var dest: Destination =  Destination("Barcelona","","",null, 1,null)
         holder.binding.textname.text = destination.dname
     }
 
     interface DestinationClickListener{
         fun onItemClick(item: Destination)
-        fun onItemChanged(item: Destination)
 
     }
     override fun getItemCount(): Int = items.size
@@ -52,5 +50,4 @@ class DestinationAdapter(private val listener: DestinationClickListener) :
         items.addAll(destinations)
         notifyDataSetChanged()
     }
-
 }

@@ -33,7 +33,6 @@ class SightsActivity : AppCompatActivity(), NewSightDialogFragment.NewSightDialo
 
         binding = ActivitySightsBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-        //print(intent.getStringExtra("DESTINATION_NAME").toString())
         binding.btnplus.setOnClickListener {
             NewSightDialogFragment().show(
                 supportFragmentManager,

@@ -26,6 +26,8 @@ import java.io.IOException
 import java.security.AccessController.getContext
 import java.util.*
 import android.widget.Toast
+import com.google.android.gms.maps.model.MapStyleOptions
+import hu.bme.aut.funtravel.R
 import hu.bme.aut.funtravel.adapter.DestinationAdapter
 import hu.bme.aut.funtravel.data.DestinationDatabase
 import kotlin.concurrent.thread
@@ -54,8 +56,6 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,  GoogleMap.OnMarker
             overridePendingTransition(hu.bme.aut.funtravel.R.anim.slide_in_right, hu.bme.aut.funtravel.R.anim.slide_out_left);
         }
         binding.leftbutton.setOnClickListener {
-            //val intent = Intent(baseContext, MainActivity::class.java)
-            //intent.putExtra("Location", location)
             finish()
             overridePendingTransition(hu.bme.aut.funtravel.R.anim.slide_in_left, hu.bme.aut.funtravel.R.anim.slide_out_right);
         }
@@ -72,6 +72,11 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,  GoogleMap.OnMarker
 
     override fun onMapReady(googlemap: GoogleMap?) {
         mMap = googlemap
+
+
+        val mapStyleOptions = MapStyleOptions.loadRawResourceStyle(this, R.raw.mapstyle)
+        mMap!!.setMapStyle(mapStyleOptions)
+
         if (mMap != null) {
             geo = Geocoder(this, Locale.getDefault());
 
@@ -97,10 +102,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,  GoogleMap.OnMarker
                                         + " Address: " + address[0].getAddressLine(0)
                             )
                         )
-                       binding.textLocation.setText(
-                            "Country: " + address[0].countryName
-                                    + " Address: " + address[0].getAddressLine(0)
-                        )
+                        binding.textLocation.text = ("Country: " + address[0].countryName
+                                + " Address: " + address[0].getAddressLine(0))
                         thread {
                             database.DestinationDao().updateDest(intent.getStringExtra("DESTINATION_NAME").toString(),location!!)
                         }

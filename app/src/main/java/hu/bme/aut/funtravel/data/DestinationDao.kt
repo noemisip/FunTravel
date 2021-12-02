@@ -14,6 +14,9 @@ interface DestinationDao {
     @Query("SELECT location FROM destination WHERE dname = :name")
     fun getDestLocation(name: String): String
 
+    @Query("SELECT location FROM sight WHERE name = :name")
+    fun getSightLocation(name: String): String
+
     @Insert
     fun insert(destinations: Destination): Long
 
@@ -26,6 +29,9 @@ interface DestinationDao {
 
     @Query("UPDATE Destination SET location = :location WHERE dname = :name")
     fun updateDest(name: String, location: String)
+
+    @Query("UPDATE Sight SET location = :location WHERE name = :name")
+    fun updateSight(name: String, location: String)
 
     @Update
     fun updateSight(sight: Sight)

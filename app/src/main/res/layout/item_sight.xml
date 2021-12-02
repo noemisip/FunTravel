@@ -17,7 +17,7 @@
         android:layout_marginLeft="8dp"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:background="#FFC8C8"
+        android:background="@color/item_sight"
         android:weightSum="10">
 
         <TextView
@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            tools:text="Barcelona"
+            tools:text="@string/sampleSight"
             android:padding="10sp"
             android:textColor="@color/white"
             android:layout_weight="8"/>
@@ -42,7 +42,7 @@
             android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:backgroundTint="#FFC8C8"
+            android:backgroundTint="@color/item_sight"
             app:srcCompat="@android:drawable/ic_menu_delete"
             android:layout_weight="1"
             app:tint="@color/white"

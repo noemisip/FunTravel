@@ -47,13 +47,11 @@ class NewSightDialogFragment : DialogFragment() {
     private fun isValid() : Boolean {
         return binding.etName.text.isNotEmpty() &&
                 binding.etlink.text.isNotEmpty() &&
-                binding.etloc.text.isNotEmpty() &&
                 binding.etprice.text.isNotEmpty()
-
 
     }
 
     private fun getSight() = Sight(
-        0,binding.etName.text.toString(),binding.etloc.text.toString(),binding.etlink.text.toString(),binding.etprice.text.toString().toDouble(),"", false)
+        0,binding.etName.text.toString(),"",binding.etlink.text.toString(),binding.etprice.text.toString().toDouble(),"", false)
 
 }

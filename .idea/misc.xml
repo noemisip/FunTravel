@@ -6,7 +6,7 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2222222222222222" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2222222222222222" />
         <entry key="app/src/main/res/layout/activity_destination.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_details.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2125" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.17889492753623187" />
         <entry key="app/src/main/res/layout/activity_map.xml" value="0.165" />
@@ -19,7 +19,7 @@
         <entry key="app/src/main/res/layout/fragment_location.xml" value="0.17889492753623187" />
         <entry key="app/src/main/res/layout/fragment_maps.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_newdestination.xml" value="0.14285714285714285" />
-        <entry key="app/src/main/res/layout/fragment_newsight.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_newsight.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.17889492753623187" />
         <entry key="app/src/main/res/layout/fragment_sightlist.xml" value="0.12708333333333333" />
         <entry key="app/src/main/res/layout/item_destination.xml" value="0.335" />

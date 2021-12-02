@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FCDDD8"
+    android:background="@color/photo_pink"
     >
 
     <ImageButton
@@ -12,8 +12,7 @@
         android:layout_height="38dp"
         android:background="@color/white"
         android:src="@drawable/left"
-        android:backgroundTint="#FCDDD8"
-        android:text="Left"
+        android:backgroundTint="@color/photo_pink"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

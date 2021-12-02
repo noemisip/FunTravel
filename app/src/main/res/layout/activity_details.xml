@@ -11,9 +11,8 @@
         android:id="@+id/leftbutton"
         android:layout_width="106dp"
         android:layout_height="38dp"
+        android:background="@color/details_pink"
         android:src="@drawable/left"
-        android:background="#FFFAF6"
-        android:text="Left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,20 +21,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Name"
+        android:text="@string/name"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="30sp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/lprice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Price:"
+        android:layout_marginTop="30dp"
+        android:text="@string/price"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.122"
@@ -48,7 +47,7 @@
         android:layout_height="21dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="3dp"
-        android:text="price"
+        android:text="@string/samplePrice"
         app:layout_constraintStart_toEndOf="@+id/lprice"
         app:layout_constraintTop_toTopOf="@+id/lprice" />
 
@@ -58,17 +57,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="24dp"
-        android:text="Link:"
+        android:text="@string/link"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lprice"
-        android:textSize="15sp"/>
+        app:layout_constraintTop_toBottomOf="@+id/lprice" />
 
     <TextView
         android:id="@+id/textlink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="link"
+        android:text="@string/sampleLink"
         app:layout_constraintStart_toEndOf="@+id/lLink"
         app:layout_constraintTop_toTopOf="@+id/lLink" />
 
@@ -76,23 +75,29 @@
         android:id="@+id/lLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="348dp"
-        android:text="Location:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/location"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textlink"
-        android:textSize="15sp"/>
+        app:layout_constraintTop_toBottomOf="@+id/lLink" />
 
     <TextView
         android:id="@+id/textlocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="location"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sampleLocation"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lLocation" />
+
+    <fragment
+        android:id="@+id/sightmap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textlocation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

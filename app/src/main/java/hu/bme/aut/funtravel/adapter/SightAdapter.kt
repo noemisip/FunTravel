@@ -33,7 +33,6 @@ class SightAdapter(private val listener: SightAdapter.SightClickListener) : Recy
         fun onItemClick(item: Sight)
         fun onItemDeleted(item: Sight)
         fun onItemChanged(item: Sight)
-
     }
     override fun getItemCount(): Int = items.size
 

@@ -49,8 +49,4 @@ class PhotoActivity : AppCompatActivity() {
             // display error state to the user
         }
     }
-
-
-
-
 }
