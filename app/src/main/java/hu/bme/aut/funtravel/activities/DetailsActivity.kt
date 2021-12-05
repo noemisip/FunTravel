@@ -29,7 +29,7 @@ private lateinit var database: DestinationDatabase
 
 
 
-class DetailsActivity : AppCompatActivity() , OnMapReadyCallback,  GoogleMap.OnMarkerClickListener{
+class DetailsActivity : AppCompatActivity() , OnMapReadyCallback{
 
     var currentSight : Sight = Sight(0,"","","", 0.0,"",false);
 
@@ -139,10 +139,5 @@ class DetailsActivity : AppCompatActivity() , OnMapReadyCallback,  GoogleMap.OnM
         }
         return p1
     }
-
-    override fun onMarkerClick(p0: Marker?): Boolean {
-        TODO("Not yet implemented")
-    }
-
 
 }

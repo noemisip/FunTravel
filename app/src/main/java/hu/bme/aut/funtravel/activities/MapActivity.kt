@@ -36,7 +36,7 @@ import kotlin.concurrent.thread
 private lateinit var binding: ActivityMapBinding
 private lateinit var database: DestinationDatabase
 
-class MapActivity : AppCompatActivity(), OnMapReadyCallback,  GoogleMap.OnMarkerClickListener{
+class MapActivity : AppCompatActivity(), OnMapReadyCallback{
 
     private var mMap: GoogleMap? = null
     private var geo : Geocoder? = null
@@ -140,11 +140,6 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback,  GoogleMap.OnMarker
         }
         return p1
     }
-
-    override fun onMarkerClick(p0: Marker?): Boolean {
-        TODO("Not yet implemented")
-    }
-
 
 }
 
